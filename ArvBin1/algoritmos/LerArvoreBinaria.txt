@@ -1,0 +1,20 @@
+arvbin *LerArvore(FILE *arq) {
+   char c;
+   int num;
+
+   fscanf(arq,"%c",&c);
+   fscanf(arq,"%s",&num);
+   
+   if (num==-1) {
+      fscanf(arq,"%c",&c);
+      return NULL;
+   }
+   else {
+      a = (arvbin*) malloc(sizeof(arvbin));
+      arvbin->info = num;
+      arvbin->esq = LerArvore(arq);
+      arvbin->dir = LerArvore(arq);
+      fscanf(arq,"%c",&c);
+      return a;
+   }
+}

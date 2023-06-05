@@ -1,0 +1,29 @@
+ABB *Remover (ABB *a, int x) {
+   if (x == a->info) 
+      if (a->esq==NULL && 
+           a->dir==NULL){
+         free(a);
+         return NULL;
+      else if (a->esq==NULL || 
+           a->dir==NULL){  
+         ABB *aux;
+         if (a->esq == NULL)
+            aux = a->dir;
+         else
+            aux = a->esq;
+         free(a);
+         return(aux);
+      else {
+         maiorEsq = a->esq;
+         while (maiorEsq->dir != NULL)
+            maiorEsq = maiorEsq->dir;
+         a->info = maiorEsq->info;
+         maiorEsq->info = x;
+         a->esq = Remover(a->esq, x);
+      }
+   else if (x < a->info)
+      a->esq = Remover(a->esq, x);
+   else
+      a->dir = Remover(a->dir, x);
+   return a;
+} 

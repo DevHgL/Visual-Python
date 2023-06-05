@@ -1,0 +1,17 @@
+void ImprimirNivel(arvbin *a, int cont, int n) {
+   if (a != NULL)
+      if (cont == n)
+         printf("%d ", a->info);
+      else {
+         ImprimirNivel(a->esq, cont+1, n);
+         ImprimirNivel(a->dir, cont+1, n);
+      }
+}
+
+void ImprimirLargura (arvbin *a, int h) {
+   int i;
+   for (i=0;i<h;i++) {
+      ImprimirNivel(a,0,i);
+      print("\n");
+   }
+}

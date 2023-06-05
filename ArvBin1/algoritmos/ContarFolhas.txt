@@ -1,0 +1,13 @@
+int ContarFolhas (arvbin *a) {
+   if (a == NULL)
+      return 0;
+   else {
+      if (a->esq == NULL && 
+            a->dir == NULL)
+         return 1;
+
+      ce = ContarFolhas(a->esq);
+      cd = ContarFolhas(a->dir);
+      return ce+cd;
+   }
+}

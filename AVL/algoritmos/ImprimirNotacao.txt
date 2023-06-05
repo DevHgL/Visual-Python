@@ -1,0 +1,10 @@
+void ImprimirNotacao(arvbin *a) {
+   if (a != NULL) {
+      printf("(%d ", a->info);
+      ImprimirNotacao(a->esq);
+      ImprimirNotacao(a->dir);
+      printf(")");
+   }
+   else
+      printf("(-1)");
+}

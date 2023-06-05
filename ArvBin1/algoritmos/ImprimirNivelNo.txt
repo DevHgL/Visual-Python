@@ -1,0 +1,15 @@
+int NivelNo(arvbin *a, int x) {
+   if (a != NULL) {
+      if (a->info == x) 
+         return 0;
+      else {
+         int ret = NivelNo(a->esq, x);
+         if (ret != -1)
+            return ret + 1;
+         ret = NivelNo(a->dir, x);
+         if (ret != -1)
+            return ret + 1;
+      }
+   }
+   return -1;
+}

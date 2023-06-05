@@ -1,0 +1,7 @@
+void ImprimirPreOrdem(arvbin *a) {
+   if (a != NULL) {
+      printf("%d ", a->info);
+      ImprimirPreOrdem(a->esq);
+      ImprimirPreOrdem(a->dir);
+   }
+}

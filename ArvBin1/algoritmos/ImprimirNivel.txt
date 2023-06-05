@@ -1,0 +1,10 @@
+void ImpNivel(arvbin *a, int c, int n) {
+   if (a != NULL) {
+      if (c == n) 
+         printf("%d ", a->info);
+      else { 
+         ImpNivel(a->esq, c+1, n);
+         ImpNivel(a->dir, c+1, n); 
+      }
+   }
+}

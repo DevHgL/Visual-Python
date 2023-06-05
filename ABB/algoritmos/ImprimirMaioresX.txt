@@ -1,0 +1,12 @@
+void ImprimirMaiores(ABB *a, int x) {
+   if (a!=NULL) {
+      if (a->info > x) {
+         print("%d ", a-nfo);
+         ImprimirMaiores(a->esq, x);
+         ImprimirMaiores(a->dir, x);
+      }
+      else
+         ImprimirMaiores(a->dir, x);
+   }
+}  
+

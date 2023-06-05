@@ -1,0 +1,13 @@
+int Busca(arvbin *a, int x) {
+   if (a==NULL)
+      return 0;
+   else {
+      if (a->info == x)
+         return 1;
+      else if (x < a->info) 
+         return Busca(a->esq, x)
+      else
+         return Busca(a->dir, x);
+   }
+}  
+  

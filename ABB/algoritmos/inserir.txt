@@ -1,0 +1,16 @@
+ABB *Inserir (ABB *a, int x) {
+   if (a == NULL) {
+      ABB *no = (ABB*) malloc(
+            sizeof(ABB));
+      no->info = x;
+      no->esq = NULL;
+      no->dir = NULL;
+      return no;
+   }
+   else
+      if (x <= a->info)
+         a->esq = Inserir(a->esq, x);
+      else
+         a->dir = Inserir(a->dir, x);
+      return a;
+}

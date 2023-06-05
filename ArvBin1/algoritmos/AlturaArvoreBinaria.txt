@@ -1,0 +1,12 @@
+int altura (arvbin *a) {
+   if (a == NULL)
+      return 0;
+   else {
+      he = altura(a->esq);
+      hd = altura(a->dir);
+      if (he>hd) 
+         return he+1;
+      else
+         return hd+1;
+   }
+}
