@@ -1,5 +1,5 @@
 # f
-
+# vdvjns\
 
 import tkinter
 from abc import abstractmethod
